@@ -1,33 +1,73 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: 'API Reference'
+description: 'Integrate with UptimeGuard using our API'
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+## Overview
 
-## Welcome
-
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+UptimeGuard offers a comprehensive API that allows you to integrate website monitoring capabilities into your own applications and workflows. This documentation provides all the information you need to interact with our API programmatically.
 
 <Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
+  title="UptimeGuard API Endpoints"
+  icon="signal"
+  href="/api-reference/openapi.json"
 >
   View the OpenAPI specification file
 </Card>
 
+## Base URL
+
+All API requests should be made to the following base URL:
+
+```
+https://api.uptimeguard.xyz/v1
+```
+
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+UptimeGuard API uses API keys for authentication. To use the API, you must include your API key in the Authorization header of each request:
+
+```bash
+Authorization: Bearer YOUR_API_KEY
+```
+
+You can generate and manage your API keys in the [UptimeGuard Dashboard](https://app.uptimeguard.xyz/settings/api-keys).
+
+<Note>
+  Keep your API keys secure and never share them publicly. If you believe an API key has been compromised, you can revoke it and generate a new one in your dashboard.
+</Note>
+
+## Rate Limiting
+
+To ensure service stability, API requests are rate limited to 60 requests per minute per API key. If you exceed this limit, you'll receive a `429 Too Many Requests` response.
+
+The response headers will include information about your rate limit status:
+
+```
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 58
+X-RateLimit-Reset: 1620000000
+```
+
+## Errors
+
+The API uses standard HTTP status codes to indicate the success or failure of a request. In case of an error, the response body will include additional information:
 
 ```json
-"security": [
-  {
-    "bearerAuth": []
+{
+  "error": {
+    "code": "invalid_parameter",
+    "message": "The URL parameter is invalid",
+    "details": "The URL must be a valid HTTP or HTTPS URL"
   }
-]
+}
 ```
+
+Common error codes include:
+
+- `400 Bad Request` - The request was malformed or contained invalid parameters
+- `401 Unauthorized` - Authentication failed, usually due to an invalid API key
+- `403 Forbidden` - The API key doesn't have permission to perform the requested action
+- `404 Not Found` - The requested resource doesn't exist
+- `429 Too Many Requests` - Rate limit exceeded
+- `500 Server Error` - An error occurred on our servers

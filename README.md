@@ -1,32 +1,64 @@
-# Mintlify Starter Kit
+# UptimeGuard Documentation
 
-Click on `Use this template` to copy the Mintlify starter kit. The starter kit contains examples including
+This repository contains the official documentation for UptimeGuard, a simple website monitoring service designed for solo entrepreneurs.
 
-- Guide pages
-- Navigation
-- Customizations
-- API Reference pages
-- Use of popular components
+## About UptimeGuard
 
-### Development
+UptimeGuard provides straightforward website monitoring with features including:
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the documentation changes locally. To install, use the following command
+- Simple uptime monitoring for websites
+- Instant notifications when your site goes down
+- Performance tracking and metrics
+- API access for custom integrations
+- Mobile app for on-the-go monitoring
+
+## Documentation Structure
+
+This documentation includes:
+
+- Getting started guides
+- Feature documentation
+- API reference
+- Integration examples
+- Best practices
+
+## Development
+
+To work on this documentation locally, follow these steps:
+
+1. Install the [Mintlify CLI](https://www.npmjs.com/package/mintlify):
 
 ```
 npm i -g mintlify
 ```
 
-Run the following command at the root of your documentation (where docs.json is)
+2. Run the following command at the root of the documentation (where docs.json is):
 
 ```
 mintlify dev
 ```
 
-### Publishing Changes
+3. The documentation will be available at http://localhost:3000
 
-Install our Github App to auto propagate changes from your repo to your deployment. Changes will be deployed to production automatically after pushing to the default branch. Find the link to install on your dashboard. 
+## Publishing Changes
 
-#### Troubleshooting
+Changes to the documentation are automatically deployed when pushed to the main branch. The Mintlify GitHub App handles the deployment process.
 
-- Mintlify dev isn't running - Run `mintlify install` it'll re-install dependencies.
-- Page loads as a 404 - Make sure you are running in a folder with `docs.json`
+## Troubleshooting
+
+- If Mintlify dev isn't running, try `mintlify install` to re-install dependencies
+- If a page loads as a 404, make sure you're running in a folder with `docs.json`
+- For additional help, contact support@uptimeguard.xyz
+
+## Contributing
+
+If you'd like to contribute to the UptimeGuard documentation, please follow these steps:
+
+1. Fork this repository
+2. Create a new branch for your changes
+3. Make your changes and test them locally
+4. Submit a pull request with a clear description of your changes
+
+## License
+
+This documentation is copyright © UptimeGuard 2023-2024. All rights reserved.

@@ -1,97 +1,108 @@
 ---
 title: 'Quickstart'
-description: 'Start building awesome documentation in under 5 minutes'
+description: 'Get started with UptimeGuard in minutes'
 ---
 
-## Setup your development
+## Setting Up Your First Monitor
 
-Learn how to update your docs locally and deploy them to the public.
+Get your website monitoring up and running quickly with UptimeGuard.
 
-### Edit and preview
+### Create Your Account
 
 <AccordionGroup>
-  <Accordion icon="github" title="Clone your docs locally">
-    During the onboarding process, we created a repository on your Github with
-    your docs content. You can find this repository on our
-    [dashboard](https://dashboard.mintlify.com). To clone the repository
-    locally, follow these
-    [instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
-    in your terminal.
+  <Accordion icon="user" title="Sign Up for UptimeGuard">
+    Visit [UptimeGuard](https://app.uptimeguard.xyz/register) to create your account. 
+    The signup process only takes a minute - simply provide your email address and create a password.
+    You'll receive a confirmation email to verify your account before proceeding.
   </Accordion>
-  <Accordion icon="rectangle-terminal" title="Preview changes">
-    Previewing helps you make sure your changes look as intended. We built a
-    command line interface to render these changes locally. 
-    1. Install the
-    [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the
-    documentation changes locally with this command: ``` npm i -g mintlify ```
-    2. Run the following command at the root of your documentation (where
-    `docs.json` is): ``` mintlify dev ```
+  
+  <Accordion icon="gauge-high" title="Access Your Dashboard">
+    After confirming your email, log in to access your [UptimeGuard Dashboard](https://app.uptimeguard.xyz/dashboard).
+    This is your command center for all monitoring activities, where you'll be able to see the status of all your websites at a glance.
+  </Accordion>
+</AccordionGroup>
+
+### Configure Your First Monitor
+
+<AccordionGroup>
+  <Accordion icon="plus" title="Add a Website">
+    From your dashboard, click the "Add Website" button to begin monitoring a new site.
+    Enter the URL of the website you want to monitor, such as `https://example.com`.
+    
     <Note>
-      If you’re currently using the legacy ```mint.json``` configuration file, please update the Mintlify CLI:
-
-
-      ```npm i -g mintlify@latest```
-      And run the new upgrade command in your docs repository:
-
-      ```mintlify upgrade```
-      You should now be using the new ```docs.json``` configuration file. Feel free to delete the ```mint.json``` file from your repository.
+      Make sure to include the protocol (http:// or https://) when entering your website URL.
     </Note>
   </Accordion>
+  
+  <Accordion icon="sliders" title="Configure Monitoring Settings">
+    Customize your monitoring settings:
+    
+    1. **Monitoring Interval** - Choose how frequently UptimeGuard should check your website (e.g., every 1, 5, or 15 minutes)
+    2. **Alert Settings** - Set up notification preferences for when your site goes down
+    3. **Response Validation** - Optionally configure specific status codes or content checks
+    
+    Once configured, click "Save" to start monitoring.
+  </Accordion>
 </AccordionGroup>
 
-### Deploy your changes
+### Set Up Notifications
 
 <AccordionGroup>
-
-<Accordion icon="message-bot" title="Install our Github app">
-  Our Github app automatically deploys your changes to your docs site, so you
-  don't need to manage deployments yourself. You can find the link to install on
-  your [dashboard](https://dashboard.mintlify.com). Once the bot has been
-  successfully installed, there should be a check mark next to the commit hash
-  of the repo.
-</Accordion>
-<Accordion icon="rocket" title="Push your changes">
-  [Commit and push your changes to
-  Git](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository#about-git-push)
-  for your changes to update in your docs site. If you push and don't see that
-  the Github app successfully deployed your changes, you can also manually
-  update your docs through our [dashboard](https://dashboard.mintlify.com).
-</Accordion>
-
+  <Accordion icon="bell" title="Configure Alert Channels">
+    UptimeGuard can notify you through multiple channels when issues are detected:
+    
+    1. Go to "Notification Settings" in your account
+    2. Add and verify communication channels such as:
+       - Email notifications
+       - SMS alerts
+       - Webhook integrations
+       - Slack notifications
+    
+    You can customize which alerts go to which channels, and set up escalation policies for critical websites.
+  </Accordion>
+  
+  <Accordion icon="mobile" title="Install Mobile App">
+    Download the UptimeGuard mobile app to receive push notifications and check your website status on the go:
+    
+    - [iOS App Store](https://apps.apple.com/app/uptimeguard)
+    - [Google Play Store](https://play.google.com/store/apps/details?id=xyz.uptimeguard.app)
+  </Accordion>
 </AccordionGroup>
 
-## Update your docs
+## Next Steps
 
-Add content directly in your files with MDX syntax and React components. You can use any of our components, or even build your own.
+Once you've set up your first monitor, explore these additional features:
 
 <CardGroup>
+  <Card
+    title="Advanced Monitoring"
+    icon="chart-network"
+    href="/essentials/markdown"
+  >
+    Learn about advanced monitoring features like content validation, SSL certificate checks, and more.
+  </Card>
 
-<Card title="Add Content With MDX" icon="file" href="/essentials/markdown">
-  Add content to your docs with MDX syntax.
-</Card>
+  <Card
+    title="Integrate with Your Tools"
+    icon="plug"
+    href="/api-reference/introduction"
+  >
+    Connect UptimeGuard with your existing systems using our API and webhooks.
+  </Card>
 
-<Card
-  title="Add Code Blocks"
-  icon="square-code"
-  href="/essentials/code"
->
-  Add code directly to your docs with syntax highlighting.
-</Card>
+  <Card
+    title="Performance Analysis"
+    icon="tachometer-alt"
+    href="/essentials/code"
+  >
+    Understand your website's performance metrics and identify areas for improvement.
+  </Card>
 
-<Card
-  title="Add Images"
-  icon="image"
-  href="/essentials/images"
->
-  Add images to your docs to make them more engaging.
-</Card>
-
-<Card
-  title="Add Custom Components"
-  icon="puzzle-piece"
-  href="/essentials/reusable-snippets"
->
-  Add templates to your docs to make them more reusable.
-</Card>
-
+  <Card
+    title="Team Management"
+    icon="users"
+    href="/essentials/reusable-snippets"
+  >
+    Add team members and configure access permissions for collaborative monitoring.
+  </Card>
 </CardGroup>
